@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    
+</head>
+<body class="bg-gradient-to-r from-[#633232] to-[#396024]">
+    <div class="container mx-auto flex justify-center items-center h-[100vh]">
+        <div class="w-[50%] xsm:w-[70%] sm:w-[70%] md:w-[65%] lg:w-[50%] h-[50vh] bg-[#0000008e] rounded-lg flex  items-center justify-center">
+            <div class=" text-white ">
+                <button class="p-3 bg-blue-400  text-white text-xl font-normal hover:bg-white hover:text-blue-400 border-2 border-[#0000ff00] hover:border-blue-400 uppercase rounded-lg transition duration-700 " onclick="reza()"> click</button>
+            </div>
+            <div class=" text-white w-[20%] mx-4 rounded-xl">
+                <figure class="w-[100%]">
+                    <img src="img/images.jpeg" class="rounded-xl" alt="">
+                </figure>
+            </div>
+        </div>
+        <!-- <div class="w-[100%] h-[100vh] absolute top-0 left-0 bg-[#0000005d]"></div> -->
+    </div>
+    <script>
+        
+        x = document.createElement('div')
+        x.setAttribute('style','width:100%; height:100vh; position:absolute; top:0; left:-100%; background-color:rgba(255, 255, 255, 0.15); display:flex; justify-content:center; align-items:center;')
+
+       let conts =  document.getElementsByClassName('container')[0]
+       conts.appendChild(x)
+       let y=document.createElement('div')
+       y.className='text-white bg-black  xsm:w-[70%] sm:w-[65%] md:w-[60%] h-[50vh] rounded-lg p-5 relative'
+       let paragraph = document.createElement('p')
+       let h2 = document.createElement('h2')
+       let button = document.createElement('button')
+       button.addEventListener('click',()=>{
+            x.style.left='-100%'
+       })
+       button.innerHTML='close'
+       button.className = 'text-black text-xl bg-white p-4 border-2 rounded-lg uppercase border-[#00000000] hover:bg-black duration-700 hover:text-white hover:border-2 hover:border-white transition absolute bottom-5 right-5'
+       h2.className = 'xsm:text-lg md:text-xl lg:text-2xl mt-5 font-black  '
+       h2.innerHTML='please follow me and subscribed in youtube thanks'
+       paragraph.innerHTML=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quia delectus voluptatum nemo doloremque asperiores`
+       paragraph.className='text-white  capitalize'
+       x.appendChild(y)
+       y.appendChild(paragraph)
+       y.appendChild(h2)
+       y.appendChild(button)
+    //    console.log(z);
+       console.log(y);
+        console.log(x);
+        function reza(){
+            x.style.left = '0'
+            x.style.transition = '1s'
+        }
+        
+    </script>
+</body>
+</html>
